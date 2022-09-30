@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+
+import { makeStyles } from '@material-ui/core';
 import './App.css';
+import Navbar from './Component/Navbar';
+import MainRoutes from './Pages/MainRoutes';
 
 function App() {
+
+  const useStyles = makeStyles(()=>({
+    App:{
+      background:"black",
+      color : "white",
+      minHeight:"100vh"
+    }
+  }))
+
+  const classes = useStyles()
+  const {App} = classes
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div  className={App}>
+      <Navbar/>
+      <MainRoutes/>
+    
     </div>
   );
 }

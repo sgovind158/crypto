@@ -1,0 +1,5 @@
+1 react-router-dom 
+2 wrap Browser router
+3 create componet  header 
+4 create page homepage , coinpage
+5 creates routes 
